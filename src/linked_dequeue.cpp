@@ -5,6 +5,7 @@
 namespace itis {
 
 void LinkedDequeue::Enqueue(Element e) {
+
   // TODO: напишите здесь свой код ...
 }
 
