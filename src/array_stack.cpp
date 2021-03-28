@@ -10,9 +10,11 @@ ArrayStack::ArrayStack(int capacity) {
   if (capacity <= 0) {
     throw std::invalid_argument("initial capacity must be greater than zero");
   }
-data_= new Element[capacity_];
-  std::fill(data_,data_+capacity_,Element::UNDEFINED);
+
   // TODO: напишите здесь свой код ...
+  capacity_=capacity;
+    data_= new Element[capacity_];
+    std::fill(data_,data_+capacity_,Element::UNDEFINED);
 }
 
 ArrayStack::~ArrayStack() {
