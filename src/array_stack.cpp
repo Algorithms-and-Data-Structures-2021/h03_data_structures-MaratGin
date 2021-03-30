@@ -26,7 +26,7 @@ ArrayStack::~ArrayStack() {
 }
 
 void ArrayStack::Push(Element e) {
-    if (capacity_==size_||capacity_<size_){
+    if (size_==capacity_){
         resize(capacity_+kCapacityGrowthCoefficient);
     }
         data_[size_]=e;
