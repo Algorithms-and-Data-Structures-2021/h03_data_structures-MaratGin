@@ -29,6 +29,9 @@ void LinkedDequeue::EnqueueFront(Element e) {
         front_=a;
         size_++;
     }
+
+
+
   // TODO: напишите здесь свой код ...
 }
 
