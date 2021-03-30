@@ -28,10 +28,11 @@ ArrayStack::~ArrayStack() {
 void ArrayStack::Push(Element e) {
     if (capacity_==size_){
         resize(size_+kCapacityGrowthCoefficient);
-    } else{
-        data_[size_-1]=e;
-        size_++;
     }
+
+        data_[size_]=e;
+        size_++;
+
 //    if (capacity_==size_){
 //        data_[size_]=e;
 //        size_++;
@@ -46,7 +47,7 @@ void ArrayStack::Pop() {
   if (size_ == 0) {
     throw std::logic_error("cannot pop out from empty stack");
   }
-data_[size_-1]=Element::UNDEFINED;
+data_[size_]=Element::UNDEFINED;
   size_--;
   // TODO: напишите здесь свой код ...
 }
