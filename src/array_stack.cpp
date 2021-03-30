@@ -12,6 +12,7 @@ ArrayStack::ArrayStack(int capacity) {
   }
 
   // TODO: напишите здесь свой код ...
+  size_=0;
   capacity_=capacity;
     data_= new Element[capacity_];
     std::fill(data_,data_+capacity_,Element::UNDEFINED);
@@ -26,12 +27,11 @@ ArrayStack::~ArrayStack() {
 }
 
 void ArrayStack::Push(Element e) {
-    if (size_==capacity_){
+    if (size_ == capacity_){
         resize(capacity_+kCapacityGrowthCoefficient);
     }
-        data_[size_]=e;
-        size_++;
-
+    data_[size_] = e;
+    size_++;
   // TODO: напишите здесь свой код ...
 }
 
