@@ -27,12 +27,18 @@ ArrayStack::~ArrayStack() {
 
 void ArrayStack::Push(Element e) {
     if (capacity_==size_){
+        resize(size_+kCapacityGrowthCoefficient);
+    } else{
         data_[size_]=e;
         size_++;
-    } else{
-        resize(size_+kCapacityGrowthCoefficient);
-
     }
+//    if (capacity_==size_){
+//        data_[size_]=e;
+//        size_++;
+//    } else{
+//
+
+
   // TODO: напишите здесь свой код ...
 }
 
