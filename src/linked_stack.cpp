@@ -29,6 +29,8 @@ void LinkedStack::Clear() {
         delete deleting_node;
 
     }
+    size_=0;
+    top_= nullptr;
   // TODO: напишите здесь свой код ...
 }
 
