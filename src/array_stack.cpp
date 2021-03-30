@@ -62,6 +62,9 @@ void ArrayStack::resize(int new_capacity) {
     for (int i = size_; i <new_capacity ; ++i) {
         resized[i]=Element::UNDEFINED;
     }
+    delete[] data_;
+    data_=resized;
+    capacity_=new_capacity;
 
 }
 
