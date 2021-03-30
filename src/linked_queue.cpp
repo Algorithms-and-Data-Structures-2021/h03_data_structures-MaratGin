@@ -40,6 +40,7 @@ void LinkedQueue::Clear() {
         delete delete_node;
 
     }
+    size_=0;
     front_= nullptr;
     back_= nullptr;
   // TODO: напишите здесь свой код ...
