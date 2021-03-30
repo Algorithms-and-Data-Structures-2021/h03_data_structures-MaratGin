@@ -38,8 +38,10 @@ void LinkedQueue::Clear() {
         auto delete_node=node;
         node=node->next;
         delete delete_node;
+        delete node;
 
     }
+
     size_=0;
     front_= nullptr;
     back_= nullptr;
