@@ -26,7 +26,7 @@ ArrayStack::~ArrayStack() {
 }
 
 void ArrayStack::Push(Element e) {
-    if (capacity_>size_){
+    if (capacity_==size_){
         data_[size_]=e;
         size_++;
     } else{
