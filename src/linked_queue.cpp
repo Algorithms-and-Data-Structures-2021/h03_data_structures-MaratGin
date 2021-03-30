@@ -22,6 +22,7 @@ void LinkedQueue::Dequeue() {
   }
 //SinglyNode *node=front_;
     if (size_==1){
+        delete front_;
         front_= nullptr;
         back_= nullptr;
 
@@ -34,11 +35,11 @@ void LinkedQueue::Dequeue() {
 }
 
 void LinkedQueue::Clear() {
-    for (SinglyNode *node=front_;node!= nullptr;) {
+    for (SinglyNode *node=back_;node!= nullptr;) {
         auto delete_node=node;
         node=node->next;
         delete delete_node;
-        delete node;
+
 
     }
 
